@@ -1,0 +1,13 @@
+<resources>
+
+    <color name="black_overlay">#bf000000</color>
+    <color name="red_overlay">#60cc0000</color>
+    
+	<color name="graph_red">#ffcc0000</color>
+	<color name="graph_green">#ff99cc00</color>
+	<color name="graph_white">#ffffffff</color>
+	<color name="graph_pink">#ffe5acb6</color>
+    <color name="graph_blue">#ff33b5e5</color>
+    <color name="graph_yellow">#ffffff00</color>
+        
+</resources>

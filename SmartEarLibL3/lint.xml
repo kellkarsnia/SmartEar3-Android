@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="InlinedApi">
+        <ignore path="src/com/steelmantools/smartear/GraphingActivity.java" />
+        <ignore path="src/com/steelmantools/smartear/MainActivity.java" />
+    </issue>
+</lint>

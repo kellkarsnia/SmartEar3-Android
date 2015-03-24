@@ -1,0 +1,29 @@
+<resources>
+
+    <dimen name="meter_fragment_width">250dp</dimen>
+    <dimen name="meter_fragment_height">210dp</dimen>
+    <dimen name="meter_layout_paddingBottom">35dp</dimen>
+    <dimen name="meter_mainScreenAverage_marginLeft">20dp</dimen>
+    <dimen name="meter_mainScreenPeak_marginRight">20dp</dimen>
+    <dimen name="n_mainScreenGaugeDecibels_marginTop">32dp</dimen>
+    <dimen name="a_mainScreenAnalogMeter_height">147dp</dimen>
+    <dimen name="a_mainScreenNeedle_width">94dp</dimen>
+    <dimen name="a_mainScreenNeedle_height">9dp</dimen>
+    <dimen name="a_mainScreenNeedle_marginBottom">2dp</dimen>
+    <dimen name="a_mainScreenNeedle_transformPivotX">100dp</dimen>
+    <dimen name="a_mainScreenGauge_width">70dp</dimen>
+    <dimen name="a_mainScreenGauge_height">70dp</dimen>
+    <dimen name="a_mainScreenGauge_marginBottom">30dp</dimen>
+    <dimen name="a_mainScreenGaugeDecibels_marginBottom">52dp</dimen>
+    <dimen name="a_mainScreenGaugeRefreshRate_marginBottom">42dp</dimen>
+
+    <dimen name="meter_reading_font_size">22sp</dimen>
+    <dimen name="n_decibel_font_size">64sp</dimen>
+    <dimen name="n_refreshrate_font_size">16sp</dimen>
+    <dimen name="a_decibel_font_size">24sp</dimen>
+    <dimen name="a_refreshrate_font_size">12sp</dimen>
+    
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+</resources>

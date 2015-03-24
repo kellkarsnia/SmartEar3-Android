@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_overlay" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:weightSum="3" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/settingsRefreshRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:drawableRight="@drawable/round_reset"
+                android:gravity="center"
+                android:text="@string/refresh_rate" />
+
+            <TextView
+                android:id="@+id/settingsRefreshRateQuantity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settingsRefreshRate"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/gauge_default"
+                android:textColor="#FF0000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="65dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/settingsRefreshRateQuantity"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_rotate"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/settingsRefreshRateButtonUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/_empty"
+                    android:onClick="onClick"
+                    android:src="@drawable/arrow_up" />
+
+                <ImageView
+                    android:id="@+id/settingsRefreshRateButtonDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/_empty"
+                    android:onClick="onClick"
+                    android:src="@drawable/arrow_down" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/settingsOffset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:drawableRight="@drawable/round_reset"
+                android:gravity="center"
+                android:text="@string/offset" />
+
+            <TextView
+                android:id="@+id/settingsOffsetQuantity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settingsOffset"
+                android:layout_margin="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/gauge_default"
+                android:textColor="#FF0000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="65dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/settingsOffsetQuantity"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_rotate"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2" >
+
+                <ImageView
+                    android:id="@+id/settingsOffsetButtonUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/_empty"
+                    android:onClick="onClick"
+                    android:src="@drawable/arrow_up" />
+
+                <ImageView
+                    android:id="@+id/settingsOffsetButtonDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/_empty"
+                    android:onClick="onClick"
+                    android:src="@drawable/arrow_down" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/settingsVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:drawableRight="@drawable/round_reset"
+                android:gravity="center"
+                android:text="@string/volume" />
+
+            <TextView
+                android:id="@+id/settingsVolumeQuantity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settingsVolume"
+                android:layout_margin="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/gauge_default"
+                android:textColor="#FF0000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="65dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/settingsVolumeQuantity"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_rotate"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.steelmantools.smartear.widgets.VerticalSeekBar
+                    android:id="@+id/settingsVolumeSeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:max="100"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/seek_bar"
+                    android:thumb="@drawable/slider_thumb" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageButton
+            android:id="@+id/graphScreenInfoButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/info" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/_empty"
+            android:src="@drawable/gray_bar" />
+
+        <ImageButton
+            android:id="@+id/graphScreenEqualizerButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/equalizer" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/_empty"
+            android:src="@drawable/gray_bar" />
+
+        <ImageButton
+            android:id="@+id/graphScreenHelpButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/help" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,328 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <ImageButton
+            android:id="@+id/mainAutoButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/auto_off" />
+
+        <ImageButton
+            android:id="@+id/mainSettingsButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/settings_off" />
+
+        <ImageButton
+            android:id="@+id/mainChangeViewButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/change_view" />
+
+        <ImageButton
+            android:id="@+id/channelAssignButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/channel" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:contentDescription="@string/_empty"
+        android:src="@drawable/red_bar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/_empty"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
+
+        <RelativeLayout
+            android:id="@+id/graphParentLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/bottomMenuLayout"
+            android:layout_marginTop="32dp" >
+
+            <FrameLayout
+                android:id="@+id/fakeLegendLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/meter_fragment_height"
+                android:background="@android:color/transparent" />
+
+            <LinearLayout
+                android:id="@+id/legendLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_above="@id/graphLayout"
+                android:gravity="bottom" >
+
+                <TextView
+                    android:id="@+id/legendChannel1TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/unassigned"
+                    android:textColor="@color/graph_red" />
+
+                <TextView
+                    android:id="@+id/legendChannel2TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/unassigned"
+                    android:textColor="@color/graph_green" />
+
+                <TextView
+                    android:id="@+id/legendChannel3TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/unassigned"
+                    android:textColor="@color/graph_white" />
+
+                <TextView
+                    android:id="@+id/legendChannel4TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/unassigned"
+                    android:textColor="@color/graph_pink" />
+
+                <TextView
+                    android:id="@+id/legendChannel5TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/unassigned"
+                    android:textColor="@color/graph_blue" />
+
+                <TextView
+                    android:id="@+id/legendChannel6TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/unassigned"
+                    android:textColor="@color/graph_yellow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/graphLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/fakeLegendLayout"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical"
+                android:visibility="invisible" />
+           <LinearLayout
+            android:id="@+id/graphLayoutBar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/fakeLegendLayout"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            android:visibility="invisible" />    
+
+            <RelativeLayout
+                android:id="@+id/fakeGraphView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/mainTapInstructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:text="@string/tap_graph_to_zoom"
+                android:textColor="#535967" />
+
+            <Button
+                android:id="@+id/changeChannelView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/mainMeterFragment"
+            android:layout_width="@dimen/meter_fragment_width"
+            android:layout_height="@dimen/meter_fragment_height"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp" />
+
+        <ImageView
+            android:id="@+id/mainReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/_empty"
+            android:src="@drawable/round_reset" />
+
+        <LinearLayout
+            android:id="@+id/bottomMenuLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <ImageButton
+                android:id="@+id/recordButton"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_buttons_background"
+                android:contentDescription="@string/_empty"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:src="@drawable/record" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:contentDescription="@string/_empty"
+                android:src="@drawable/gray_bar" />
+
+            <ImageButton
+                android:id="@+id/microphoneButton"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_buttons_background"
+                android:contentDescription="@string/_empty"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:src="@drawable/microphone_on" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:contentDescription="@string/_empty"
+                android:src="@drawable/gray_bar" />
+
+            <ImageButton
+                android:id="@+id/clampButton"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_buttons_background"
+                android:contentDescription="@string/_empty"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:src="@drawable/clamp_off" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:contentDescription="@string/_empty"
+                android:src="@drawable/gray_bar" />
+
+            <ImageButton
+                android:id="@+id/recordingsButton"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_buttons_background"
+                android:contentDescription="@string/_empty"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:src="@drawable/recordings" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/sampleSettingsFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent" />
+
+        <FrameLayout
+            android:id="@+id/recordingLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/mainMeterFragment"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+
+</LinearLayout>

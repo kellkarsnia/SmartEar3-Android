@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageButton
+            android:id="@+id/graphScreenInfoButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/info" />
+
+        <ImageButton
+            android:id="@+id/graphScreenEqualizerButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/equalizer" />
+
+        <ImageButton
+            android:id="@+id/graphScreenHelpButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/help" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:contentDescription="@string/_empty"
+        android:src="@drawable/red_bar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/graphLayoutPlayback"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical" />
+        
+        <LinearLayout
+            android:id="@+id/graphLayoutBar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical"
+            android:visibility="invisible" />
+        
+        <Button
+            android:id="@+id/changeChannelView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="8dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.steelmantools.smartear.visualizer.VisualizerView
+            android:id="@+id/visualizerView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="45dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp" >
+        </com.steelmantools.smartear.visualizer.VisualizerView>
+
+    </RelativeLayout>
+    
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/_empty"
+            android:src="@drawable/gray_bar" />
+
+        <TextView
+            android:id="@+id/textViewFileName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/FILENAME_TEXT" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <ImageButton
+            android:id="@+id/pauseButtonPlayback"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bottom_buttons_background"
+            android:contentDescription="@string/_empty"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/pause" /> 
+    </LinearLayout>
+
+</LinearLayout>

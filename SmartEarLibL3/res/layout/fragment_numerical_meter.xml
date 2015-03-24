@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/meter_fragment_width"
+    android:layout_height="@dimen/meter_fragment_height" >
+
+    <ImageView
+        android:id="@+id/mainScreenDigitalMeter"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/_empty"
+        android:scaleType="fitXY"
+        android:src="@drawable/digital_meter" />
+
+    <TextView
+        android:id="@+id/mainScreenGaugeDecibels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/n_mainScreenGaugeDecibels_marginTop"
+        android:text="@string/gauge_default"
+        android:textColor="#FF0000"
+        android:textSize="@dimen/n_decibel_font_size"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/mainScreenGaugeRefreshRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainScreenGaugeDecibels"
+        android:layout_centerHorizontal="true"
+        android:text="@string/gauge_default"
+        android:textColor="#FF0000"
+        android:textSize="@dimen/n_refreshrate_font_size" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/meter_layout_paddingBottom"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/mainScreenAverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/meter_mainScreenAverage_marginLeft"
+            android:text="@string/gauge_default"
+            android:textColor="#555555"
+            android:textSize="@dimen/meter_reading_font_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mainScreenPeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/meter_mainScreenPeak_marginRight"
+            android:text="@string/gauge_default"
+            android:textColor="#555555"
+            android:textSize="@dimen/meter_reading_font_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="channel_names">
+        <item>Unassigned</item>
+        <item>CENTER LINK</item>
+        <item>DIFFERENTIAL</item>
+        <item>IDLER ARM</item>
+        <item>INNER TIE-ROD END</item>
+        <item>LOWER BALL JOINT</item>
+        <item>LOWER CONTROL ARM</item>
+        <item>OUTER TIE-ROD END</item>
+        <item>PITMAN ARM</item>
+        <item>SPINDLE/STEERING KNUCKLE</item>
+        <item>SWAY BAR</item>
+        <item>TRANSAXLE</item>
+        <item>TRANSFERCASE</item>
+        <item>TRANSMISSION</item>
+        <item>UPPER BALL JOINT</item>
+        <item>UPPER CONTROL ARM</item>
+        <item>OTHER (SPECIFY)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/meter_fragment_width"
+    android:layout_height="@dimen/meter_fragment_height" >
+
+    <ImageView
+        android:id="@+id/mainScreenDigitalMeter"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/_empty"
+        android:scaleType="fitXY"
+        android:src="@drawable/digital_meter" />
+    
+    <ImageView
+        android:id="@+id/mainScreenAnalogMeter"
+        android:layout_width="@dimen/meter_fragment_width"
+        android:layout_height="@dimen/a_mainScreenAnalogMeter_height"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/_empty"
+        android:scaleType="fitXY"
+        android:src="@drawable/analog_meter" />
+
+    <ImageView
+        android:id="@+id/mainScreenNeedle"
+        android:layout_width="@dimen/a_mainScreenNeedle_width"
+        android:layout_height="@dimen/a_mainScreenNeedle_height"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_alignRight="@+id/mainScreenGaugeRefreshRate"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="@dimen/a_mainScreenNeedle_marginBottom"
+        android:contentDescription="@string/_empty"
+        android:scaleType="fitXY"
+        android:transformPivotX="@dimen/a_mainScreenNeedle_transformPivotX"
+        android:src="@drawable/needle" />
+    
+    <ImageView
+        android:id="@+id/mainScreenGauge"
+        android:layout_width="@dimen/a_mainScreenGauge_width"
+        android:layout_height="@dimen/a_mainScreenGauge_height"
+        android:layout_marginBottom="@dimen/a_mainScreenGauge_marginBottom"
+        android:contentDescription="@string/_empty"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gauge" />
+    
+    <TextView
+        android:id="@+id/mainScreenGaugeDecibels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/a_mainScreenGaugeDecibels_marginBottom"
+        android:text="@string/gauge_default"
+        android:textColor="#FF0000"
+        android:textSize="@dimen/a_decibel_font_size"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/mainScreenGaugeRefreshRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/a_mainScreenGaugeRefreshRate_marginBottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/gauge_default"
+        android:textColor="#FF0000"
+        android:textSize="@dimen/a_refreshrate_font_size" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/meter_layout_paddingBottom"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/mainScreenAverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/meter_mainScreenAverage_marginLeft"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/gauge_default"
+            android:textColor="#555555"
+            android:textSize="@dimen/meter_reading_font_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mainScreenPeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/meter_mainScreenPeak_marginRight"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/gauge_default"
+            android:textColor="#555555"
+            android:textSize="@dimen/meter_reading_font_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

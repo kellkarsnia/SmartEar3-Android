@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Smart Ear</string>
+    <string name="_empty" />
+    <string name="tap_graph_to_zoom">Tap Graph to Zoom</string>
+    <string name="gauge_default">--</string>
+    <string name="refresh_rate">Refresh Rate</string>
+    <string name="offset">Offset</string>
+    <string name="volume">Volume</string>
+    <string name="INFO">INFO</string>
+    <string name="EQUALIZER">EQUALIZER</string>
+    <string name="cancel">Cancel</string>
+    <string name="OK">OK</string>
+    <string name="HELP">HELP</string>
+    <string name="CHANNELS">CHANNELS</string>
+    <string name="EMAIL">EMAIL</string>
+    <string name="DELETE">DELETE</string>
+    <string name="TEST">TEST</string>
+    <string name="EDIT">EDIT</string>
+    <string name="BT_CHANNEL">CH</string>
+    <string name="FRONT">FRONT</string>
+    <string name="FRONT_LEFT">LEFT-FRONT</string>
+    <string name="FRONT_RIGHT">RIGHT-FRONT</string>
+    <string name="REAR">REAR</string>
+    <string name="REAR_LEFT">LEFT-REAR</string>
+    <string name="REAR_RIGHT">RIGHT-REAR</string>
+    <string name="SAVED_RECORDINGS">SAVED RECORDINGS</string>
+    <string name="FILENAME_TEXT">FILENAME</string>
+    <string name="select_a_part_name">Select a part name</string>
+    <string name="channel_prompt">Channel</string>
+    <string name="edit_recording">Edit Recording</string>
+    <string name="name_colon">Name:</string>
+    <string name="recorded_date_colon">Recorded Date:</string>
+    <string name="recorded_length_colon">Recorded Length:</string>
+    <string name="select_a_channel">Select a Channel</string>
+    <string name="select_a_recording_type">Select a Recording Type</string>
+    <string name="audio">Audio</string>
+    <string name="video">Video</string>
+    <string name="tap_to_select_location">Tap to select location</string>
+    <string name="channel1">Channel 1</string>
+    <string name="channel2">Channel 2</string>
+    <string name="channel3">Channel 3</string>
+    <string name="channel4">Channel 4</string>
+    <string name="channel5">Channel 5</string>
+    <string name="channel6">Channel 6</string>
+    <string name="new_part_name">New Part Name</string>
+    <string name="DEL">DEL</string>
+    <string name="DELETE_ALL_RECORDINGS">DELETE ALL RECORDINGS?</string>
+    <string name="delete_all_confirmation">Are you certain that you want to remove all recordings?</string>
+    <string name="delete_file">Delete file?</string>
+    <string name="encoding_video">Encoding Video</string>
+    <string name="unassigned">Unassigned</string>
+    <string name="crash_toast_text">Woops! I crashed, but a report has been sent to my developer to help fix the issue!</string>
+    <string name="button_record">Record</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="none_paired">No Paired Devices</string>
+    <string name="content_description">Content Description</string>
+    <string name="title_activity_hardware_dialog">HardwareDialogActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_connect_device_dialog">ConnectDeviceDialogActivity</string>
+    <string name="title_activity_device_not_found_dialog">DeviceNotFoundDialogActivity</string>
+
+</resources>
